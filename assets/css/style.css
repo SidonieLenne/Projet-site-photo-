@@ -1,0 +1,84 @@
+/*Simulation d'entête*/
+body{
+    background:url('../images/paysage1.jpg') no-repeat scroll 0 0 / 100% auto;
+}
+/*Simulation de navBar*/
+#navBar{
+    float:left;
+    margin-top:500px;
+    width:25%;
+    margin-left:0px;
+    height:1050px;
+    background-color:#ffffff;
+}
+
+#background{
+    background-color:#ffffff;
+    float:left;
+    position:absolute;
+    height:1050px;
+    margin-right:0%;
+    margin-bottom:0px;
+    /*Variable selon l'entête*/ 
+    margin-top:500px;
+    /*Variable selon la navbar*/
+    margin-left:24%;
+    width:75%;
+}
+
+.subCategorie{
+    padding:10px;
+    margin:10px;
+    text-align:center;
+    font-family: 'Gilda Display', serif;
+}
+
+h2{
+    padding-top:100px;
+    font-family: 'Trirong', serif;
+    border-top:1px solid #FFB300;
+}
+
+.grid-container {
+    display:grid;
+    align-items:center;
+    align-content: flex-start;
+    grid-template-columns: repeat(2, minmax(400px, 400px));
+    margin-left:10%;
+    width:80%;
+    height:700px;
+    gap:100px;
+}
+
+.gridItem{
+    position:relative;
+}
+
+.projectTitle {
+    font-size: 30px;
+    text-decoration: none;
+    position:absolute;
+    display:flex;
+    align-items:center;
+    z-index:1;
+    height:100%;
+    width:100%;
+    opacity:0;
+    transition: opacity .5s;
+    color:#000000;
+    border:1px solid #FFB300;
+}
+
+.projectImg{
+    width:100%;
+    height:100%;
+}
+
+.projectTitle:hover{
+      opacity:1;
+  }
+  
+.gridItem:hover .projectThumbnail:hover .projectImg:hover img:hover{
+    filter: blur(2px);
+    transition:opacity .5s;
+  }
