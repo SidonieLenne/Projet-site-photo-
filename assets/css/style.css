@@ -11,7 +11,8 @@ body{
     height:1050px;
     background-color:#ffffff;
 }
-
+/*............Parties 1 et 2: à propos et projets............*/
+/*Fond*/
 #background{
     background-color:#ffffff;
     float:left;
@@ -38,47 +39,53 @@ h2{
     font-family: 'Trirong', serif;
     border-top:1px solid #FFB300;
 }
-
+/*Grille*/
 .grid-container {
     display:grid;
     align-items:center;
-    align-content: flex-start;
-    grid-template-columns: repeat(2, minmax(400px, 400px));
-    margin-left:10%;
-    width:80%;
-    height:700px;
-    gap:100px;
+    /*Permet d'avoir des colonnes identiques, qui prennent tout l'espace disponible 
+    et qui font au minimum 300px et au max "1fr"(=le maximum qu'elle peut faire sans dépasser)*/
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    width:90%;
+    margin:5%;
+    height:500px;
+    grid-column-gap:50px;
 }
-
+/*les parties de grille, pour ne pas que tout ne soit immense et se chevauche*/
 .gridItem{
     position:relative;
 }
-
+/*Images, pour qu'elles prennent toute leur partie mais pas + ni -*/
+.projectImg{
+    width:100%;
+}
+/*Titres des différentes parties*/
 .projectTitle {
     font-size: 30px;
     text-decoration: none;
     position:absolute;
     display:flex;
     align-items:center;
+    text-align:end;
     z-index:1;
     height:100%;
     width:100%;
     opacity:0;
     transition: opacity .5s;
+}
+/*Couleurs des titres*/
+.black{
     color:#000000;
-    border:1px solid #FFB300;
 }
 
-.projectImg{
-    width:100%;
-    height:100%;
+.yellow{
+    color:#FFB300;
 }
-
-.projectTitle:hover{
-      opacity:1;
-  }
-  
-.gridItem:hover .projectThumbnail:hover .projectImg:hover img:hover{
+/*Pour que le titre soit visible quand on passe notre souris sur sa partie de grille */
+.gridItem:hover .projectTitle{
+    opacity:1;
+}
+  /*Pour que tout devienne flou (sauf le titre) quand on passe notre souris sur leur partie de grille*/
+.gridItem:hover .projectThumbnail .projectImg{
     filter: blur(2px);
-    transition:opacity .5s;
-  }
+}
