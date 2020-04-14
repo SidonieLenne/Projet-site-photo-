@@ -1,0 +1,96 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  height: 3300px
+}
+header {
+  width: 100%;
+  height: 850px;
+}
+#background {
+  background-image: url(../img/couverture.jpg);
+  width: 100%;
+  height: 850px;
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-attachment: scroll;
+  position: fixed;
+}
+        /* Navbar */
+nav {
+z-index: 7;
+background-color: #3B3B3B;
+width: 20%;
+height: 100%;
+position: fixed;
+left: 0px;
+box-shadow: 4px 0px 6px #7A7A7A;
+display: flex;
+top: 850px;
+
+}
+.logoblanc {
+  display: flex;
+  margin-left: 4em;
+  margin-top: -1em;
+  width: 150px;
+  height:150px;
+
+}
+ul {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+
+
+}
+li {
+  text-align: center;
+  list-style-type: none;
+  line-height: 2.5em;
+  font-size: 1.3em;
+}
+.socialButton {
+  line-height: inherit;
+}
+#followme {
+  color: #D9D9D9;
+  margin-bottom: 0em
+}
+.Button{
+  display: inline-block;
+  margin: 1em;
+  width: 1.5em;
+  height: 1.5em;
+}
+
+li:hover {
+  /* background-color: #FFB300; */
+  color: #FFB300;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-color: #FFB300;
+}
+a {
+  text-decoration: none;
+  color: #D9D9D9;
+}
+a:hover{
+  color: #FFB300;
+}
+ /* main */
+ main {
+   height:2000px;
+   position: absolute;
+   z-index: 1;
+   display: flex;
+   margin-left: 20%;
+   background-color: white;
+
+ }
+ #apropos {
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   padding: 0px 20% 0px 20%;
+ }
