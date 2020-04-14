@@ -1,3 +1,147 @@
+
+/*............Parties 1 et 2: à propos et projets............*/
+/*Fond*/
+#categoriesBackground{
+    background-color:#ffffff;
+    float:left;
+    position:absolute;
+    height:1500px;
+    margin-top:0px;
+    margin-right:0%;
+    margin-bottom:0px;
+    /*Variable selon l'entête*/ 
+    /*margin-top:500px;*/
+    /*Variable selon la navbar*/
+    /*margin-left:24%;
+    width:75%;*/
+}
+
+.subCategorie1{
+    padding:10px;
+    margin:10px;
+    margin-left:200px;
+    margin-right:200px;
+    text-align:center;
+    font-family: 'Gilda Display', serif;
+}
+
+.subCategorie2{
+    padding:20px;
+    margin:20px;
+    text-align:center;
+    font-family: 'Gilda Display', serif;
+}
+
+h2{
+    padding-top:100px;
+    font-family: 'Trirong', serif;
+    border-top:1px solid #FFB300;
+}
+/*Grille*/
+.gridContainer {
+    display:grid;
+    align-items:center;
+    /*Permet d'avoir des colonnes identiques, qui prennent tout l'espace disponible 
+    et qui font au minimum 300px et au max "1fr"(=le maximum qu'elle peut faire sans dépasser)*/
+    /*EVITER CONFLIT grid-template-columns: repeat(2, minmax(300px, 1fr));*/
+    width:90%;
+    margin:5%;
+    height:500px;
+    grid-column-gap:50px;
+}
+/*les parties de grille, pour ne pas que tout ne soit immense et se chevauche*/
+.gridItem{
+    position:relative;
+}
+/*Images, pour qu'elles prennent toute leur partie mais pas + ni -*/
+.projectImg{
+    width:100%;
+}
+/*Titres des différentes parties*/
+.projectTitle {
+    font-size: 30px;
+    text-decoration: none;
+    position:absolute;
+    display:flex;
+    align-items:center;
+    text-align:end;
+    z-index:1;
+    height:100%;
+    width:100%;
+    opacity:0;
+    transition: opacity .5s;
+}
+/*Couleurs des titres*/
+.black{
+    color:#000000;
+}
+
+.yellow{
+    color:#FFB300;
+}
+/*Pour que le titre soit visible quand on passe notre souris sur sa partie de grille */
+.gridItem:hover .projectTitle{
+    opacity:1;
+}
+  /*Pour que tout devienne flou (sauf le titre) quand on passe notre souris sur leur partie de grille*/
+/* EVITER CONFLIT .gridItem:hover .projectThumbnail .projectImg{
+    filter:blur(2px);*/
+}
+/*............Footer............*/
+#footer{
+    position:absolute;
+    bottom:0;
+    width:99%;
+    height:30px; 
+    font-family: 'Gilda Display', serif;
+    text-align:center;
+}
+
+.footerList{
+    display:inline;
+    list-style-type:none;
+    padding-left:20px;
+    padding-right:20px;
+}
+
+.footerLink{
+    color:#000000;
+}
+
+a{
+    text-decoration: none;
+}
+
+.mediaQueries{
+    display:none;
+}
+
+@media /*EVITER CONFLIT(hover:none)*/{
+    /*Grille*/
+    /*EVITER CONFLIT.gridContainer{
+        grid-template-columns: repeat(1, minmax(300px, 1fr));
+    }*/
+
+    .projectTitle{
+        opacity:1;
+    }
+    /*Footer*/
+    #footer{
+        position:fixed;
+        bottom:0;
+        background:#ffffff;
+        height:30px;
+    }
+
+    .footerList{
+        padding-right:5px;
+        padding-left:5px;
+    }
+
+    .mediaQueries{
+        display:inline;
+    }
+=======
 body {
   margin: 0px;
   padding: 0px;
