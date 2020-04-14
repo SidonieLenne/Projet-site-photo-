@@ -1,16 +1,4 @@
-/*Simulation d'entête*/
-body{
-    background:url('../images/paysage1.jpg') no-repeat scroll 0 0 / 100% auto;
-}
-/*Simulation de navBar*/
-#navBar{
-    float:left;
-    margin-top:500px;
-    width:25%;
-    margin-left:0px;
-    height:1050px;
-    background-color:#ffffff;
-}
+
 /*............Parties 1 et 2: à propos et projets............*/
 /*Fond*/
 #background{
@@ -27,9 +15,18 @@ body{
     width:75%;
 }
 
-.subCategorie{
+.subCategorie1{
     padding:10px;
     margin:10px;
+    margin-left:200px;
+    margin-right:200px;
+    text-align:center;
+    font-family: 'Gilda Display', serif;
+}
+
+.subCategorie2{
+    padding:20px;
+    margin:20px;
     text-align:center;
     font-family: 'Gilda Display', serif;
 }
@@ -40,12 +37,12 @@ h2{
     border-top:1px solid #FFB300;
 }
 /*Grille*/
-.grid-container {
+.gridContainer {
     display:grid;
     align-items:center;
     /*Permet d'avoir des colonnes identiques, qui prennent tout l'espace disponible 
     et qui font au minimum 300px et au max "1fr"(=le maximum qu'elle peut faire sans dépasser)*/
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
     width:90%;
     margin:5%;
     height:500px;
@@ -88,4 +85,13 @@ h2{
   /*Pour que tout devienne flou (sauf le titre) quand on passe notre souris sur leur partie de grille*/
 .gridItem:hover .projectThumbnail .projectImg{
     filter: blur(2px);
+}
+
+@media (hover: none){
+    .gridContainer{
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+    .projectTitle{
+        opacity:1;
+    }
 }
