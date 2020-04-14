@@ -115,11 +115,12 @@ a{
     display:none;
 }
 
-@media (hover: none){
+@media{
     /*Grille*/
     .gridContainer{
         grid-template-columns: repeat(1, minmax(300px, 1fr));
     }
+
     .projectTitle{
         opacity:1;
     }
