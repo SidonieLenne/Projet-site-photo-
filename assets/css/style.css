@@ -1,18 +1,18 @@
-
 /*............Parties 1 et 2: à propos et projets............*/
 /*Fond*/
 #background{
     background-color:#ffffff;
     float:left;
     position:absolute;
-    height:1050px;
+    height:1500px;
+    margin-top:0px;
     margin-right:0%;
     margin-bottom:0px;
     /*Variable selon l'entête*/ 
-    margin-top:500px;
+    /*margin-top:500px;*/
     /*Variable selon la navbar*/
-    margin-left:24%;
-    width:75%;
+    /*margin-left:24%;
+    width:75%;*/
 }
 
 .subCategorie1{
@@ -84,14 +84,56 @@ h2{
 }
   /*Pour que tout devienne flou (sauf le titre) quand on passe notre souris sur leur partie de grille*/
 .gridItem:hover .projectThumbnail .projectImg{
-    filter: blur(2px);
+    filter:blur(2px);
+}
+/*............Footer............*/
+#footer{
+    position:absolute;
+    bottom:0;
+    width:99%;
+    height:30px; 
+    font-family: 'Gilda Display', serif;
+    text-align:center;
+}
+
+li{
+    display:inline;
+    list-style-type:none;
+    padding-left:20px;
+    padding-right:20px;
+}
+
+.footerLink{
+    color:#000000;
+}
+
+a{
+    text-decoration: none;
+}
+
+.mediaQueries{
+    display:none;
 }
 
 @media (hover: none){
+    /*Grille*/
     .gridContainer{
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-template-columns: repeat(1, minmax(300px, 1fr));
     }
     .projectTitle{
         opacity:1;
     }
-}
+    /*Footer*/
+    #footer{
+        position:fixed;
+        bottom:0;
+        background:#ffffff;
+        height:30px;
+    }
+    li{
+        padding-right:5px;
+        padding-left:5px;
+    }
+    .mediaQueries{
+        display:inline;
+    }
