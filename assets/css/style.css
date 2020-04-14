@@ -1,18 +1,108 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    height: 1200px;
+}
+/*Entête*/
+header{
+    width: 100%;
+    height: 850px;
+}
+
+#background{
+    background-image: url(../img/couverture.jpg);
+    width: 100%;
+    height: 850px;
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-attachment: scroll;
+    position: fixed;
+    top: -5em;
+}
+/*Barre de navigation*/
+#PCnav {
+    background-color: #3B3B3B;
+    width: 20%;
+    height: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    box-shadow: 4px 0px 6px #7A7A7A;
+    display: flex;
+    z-index: 1;
+}
+
+.logoblanc {
+    display: flex;
+    margin-left: 4em;
+    margin-top: -1em;
+    width: 150px;
+    height:150px;
+    border-bottom-style: groove;
+    border-color: #FFB300;
+}
+
+ul {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+#firstNav{
+    margin-top: 3em;
+}
+
+li {
+    text-align: center;
+    list-style-type: none;
+    line-height: 2.5em;
+    font-size: 1.3em;
+}
+
+.socialButton {
+    line-height: inherit;
+}
+
+#followme {
+    color: #D9D9D9;
+    margin-bottom: 0em
+}
+
+.Button{
+    display: inline-block;
+    margin: 1em;
+    width: 1.5em;
+    height: 1.5em;
+}
+
+li:hover {
+    color: #FFB300;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-color: #FFB300;
+}
+
+a {
+    text-decoration: none;
+    color: #D9D9D9;
+}
+
+a:hover{
+    color: #FFB300;
+}
 /*............Parties 1 et 2: à propos et projets............*/
 /*Fond*/
 #categoriesBackground{
     background-color:#ffffff;
     float:left;
     position:absolute;
-    height:1500px;
+    height:1400px;
     margin-top:0px;
     margin-right:0%;
     margin-bottom:0px;
-    /*Variable selon l'entête*/ 
-    /*margin-top:500px;*/
     /*Variable selon la navbar*/
-    /*margin-left:24%;
-    width:75%;*/
+    margin-left:20%;
+    width:80%;
 }
 
 .subCategorie1{
@@ -42,7 +132,7 @@ h2{
     align-items:center;
     /*Permet d'avoir des colonnes identiques, qui prennent tout l'espace disponible 
     et qui font au minimum 300px et au max "1fr"(=le maximum qu'elle peut faire sans dépasser)*/
-    /*EVITER CONFLIT grid-template-columns: repeat(2, minmax(300px, 1fr));*/
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
     width:90%;
     margin:5%;
     height:500px;
@@ -82,9 +172,9 @@ h2{
 .gridItem:hover .projectTitle{
     opacity:1;
 }
-  /*Pour que tout devienne flou (sauf le titre) quand on passe notre souris sur leur partie de grille*/
-/* EVITER CONFLIT .gridItem:hover .projectThumbnail .projectImg{
-    filter:blur(2px);*/
+/*Pour que tout devienne flou (sauf le titre) quand on passe notre souris sur leur partie de grille*/
+.gridItem:hover .projectThumbnail .projectImg{
+    filter:blur(2px);
 }
 /*............Footer............*/
 #footer{
@@ -94,6 +184,7 @@ h2{
     height:30px; 
     font-family: 'Gilda Display', serif;
     text-align:center;
+    background-color:#ffffff;
 }
 
 .footerList{
@@ -110,16 +201,20 @@ h2{
 a{
     text-decoration: none;
 }
-
+/*Tout ce qui est pour Portable*/
 .mediaQueries{
     display:none;
 }
 
-@media /*EVITER CONFLIT(hover:none)*/{
+#MOBILEnav{
+    display:none;
+}
+
+@media (hover:none){
     /*Grille*/
-    /*EVITER CONFLIT.gridContainer{
+    .gridContainer{
         grid-template-columns: repeat(1, minmax(300px, 1fr));
-    }*/
+    }
 
     .projectTitle{
         opacity:1;
@@ -139,4 +234,41 @@ a{
 
     .mediaQueries{
         display:inline;
+    }
+    /*Barre de navigation*/
+    #PCnav{
+        display:none;
+    }
+
+    #categoriesBackground{
+        width:100%;
+        margin-left:0px;
+    }
+
+    #MOBILEnav{
+        display:inline-block;
+        position:fixed;
+        top:350px;
+        width:99%;
+        height:30px; 
+        font-family: 'Gilda Display', serif;
+        text-align:center;
+    }
+    
+    ul {
+        width:100%;
+    }
+
+    li {
+        text-align: center;
+        list-style-type: none;
+        display:inline;
+        line-height: 2.5em;
+        font-size: 1.3em;
+        margin-left:100px;
+    }
+
+    a {
+        text-decoration: none;
+        color: #D9D9D9;
     }
