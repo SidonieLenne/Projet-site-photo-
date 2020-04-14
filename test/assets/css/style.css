@@ -1,7 +1,7 @@
 body {
   margin: 0px;
   padding: 0px;
-  height: 3300px;
+  height: 3300px
 }
 header {
   width: 100%;
@@ -15,18 +15,19 @@ header {
   background-size:contain;
   background-attachment: scroll;
   position: fixed;
-  top: -5em;
 }
+        /* Navbar */
 nav {
-  background-color: #3B3B3B;
-  width: 20%;
-  height: 100%;
-  position: fixed;
-  left: 0px;
-  top: 0px;
-  box-shadow: 4px 0px 6px #7A7A7A;
-  display: flex;
-  z-index: 1;
+z-index: 7;
+background-color: #3B3B3B;
+width: 20%;
+height: 100%;
+position: fixed;
+left: 0px;
+box-shadow: 4px 0px 6px #7A7A7A;
+display: flex;
+top: 850px;
+
 }
 .logoblanc {
   display: flex;
@@ -34,16 +35,14 @@ nav {
   margin-top: -1em;
   width: 150px;
   height:150px;
-  border-bottom-style: groove;
-  border-color: #FFB300;
+
 }
 ul {
   width: 100%;
   margin: 0px;
   padding: 0px;
-}
-#firstNav{
-  margin-top: 3em;
+
+
 }
 li {
   text-align: center;
@@ -64,7 +63,9 @@ li {
   width: 1.5em;
   height: 1.5em;
 }
+
 li:hover {
+  /* background-color: #FFB300; */
   color: #FFB300;
   border-top-style: solid;
   border-bottom-style: solid;
@@ -77,12 +78,19 @@ a {
 a:hover{
   color: #FFB300;
 }
-main{
-  width: 80%;
-  height: 2000px;
-  position: absolute;
-  right: 0px;
-  margin: 0px;
-  text-align: center;
-  background-color: white;
-}
+ /* main */
+ main {
+   height:2000px;
+   position: absolute;
+   z-index: 1;
+   display: flex;
+   margin-left: 20%;
+   background-color: white;
+
+ }
+ #apropos {
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   padding: 0px 20% 0px 20%;
+ }
