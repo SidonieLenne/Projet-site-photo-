@@ -1,6 +1,6 @@
 /*............Parties 1 et 2: à propos et projets............*/
 /*Fond*/
-#background{
+#categoriesBackground{
     background-color:#ffffff;
     float:left;
     position:absolute;
@@ -42,7 +42,7 @@ h2{
     align-items:center;
     /*Permet d'avoir des colonnes identiques, qui prennent tout l'espace disponible 
     et qui font au minimum 300px et au max "1fr"(=le maximum qu'elle peut faire sans dépasser)*/
-    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    /*EVITER CONFLIT grid-template-columns: repeat(2, minmax(300px, 1fr));*/
     width:90%;
     margin:5%;
     height:500px;
@@ -83,8 +83,8 @@ h2{
     opacity:1;
 }
   /*Pour que tout devienne flou (sauf le titre) quand on passe notre souris sur leur partie de grille*/
-.gridItem:hover .projectThumbnail .projectImg{
-    filter:blur(2px);
+/* EVITER CONFLIT .gridItem:hover .projectThumbnail .projectImg{
+    filter:blur(2px);*/
 }
 /*............Footer............*/
 #footer{
@@ -96,7 +96,7 @@ h2{
     text-align:center;
 }
 
-li{
+.footerList{
     display:inline;
     list-style-type:none;
     padding-left:20px;
@@ -115,11 +115,11 @@ a{
     display:none;
 }
 
-@media{
+@media /*EVITER CONFLIT(hover:none)*/{
     /*Grille*/
-    .gridContainer{
+    /*EVITER CONFLIT.gridContainer{
         grid-template-columns: repeat(1, minmax(300px, 1fr));
-    }
+    }*/
 
     .projectTitle{
         opacity:1;
@@ -131,10 +131,12 @@ a{
         background:#ffffff;
         height:30px;
     }
-    li{
+
+    .footerList{
         padding-right:5px;
         padding-left:5px;
     }
+
     .mediaQueries{
         display:inline;
     }
