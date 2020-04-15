@@ -2,6 +2,7 @@
 <html lang="fr" dir="ltr">
     <head>
         <meta charset="utf-8"/>
+        <meta name="viewport">
         <title>Amélie Photographie</title>
         <link rel="stylesheet" href="assets/css/style.css"/>
         <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Trirong:ital,wght@0,300;1,500&display=swap" rel="stylesheet">
@@ -9,14 +10,15 @@
     <body>
         <header>
             <div id="background">
+                <img class="logonoir" src="assets\img\logo1.png" alt="logo">
             </div>
         </header>
         <!-- Navbar pour PC -->
         <nav id="PCnav">
             <ul id="listNav">
                 <img class="logoblanc" src="assets\img\logo blanc.png" alt="logo">
-                <li id=firstNav><a href="apropos.html">À propos</a></li>
-                <li><a href="projets.html">Projets</a></li>
+                <li id=firstNav><a href="#subCategorie1">À propos</a></li>
+                <li><a href="#subCategorie2">Projets</a></li>
                 <li><a href="produits.html">Produits</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="conditionsgénérales.html">Conditions générales</a></li>
@@ -30,20 +32,20 @@
                 </li>
             </ul>
         </nav>
-        <!--Barre de nav pour mobile-->
+        <!--Navbar pour mobile-->
         <nav id="MOBILEnav">
             <ul id="listNav">
                 <img class="logoblanc" src="assets\img\logo blanc.png" alt="logo">
                 <li id=firstNav><a href="apropos.html">À propos</a></li>
-                <li><a href="projets.html">Projets</a></li>
-                <li><a href="produits.html">Produits</a></li>
+                <li><a href="#subCategorie1">Projets</a></li>
+                <li><a href="#subCategorie2">Produits</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
         <!--Background-->
         <div id="categoriesBackground">
             <!--............Partie 1: à propos...........-->
-            <div class="subCategorie1">
+            <div id="subCategorie1">
                 <h2>A propos</h2>
                 <p>Ma passion de toujours pour la photographie m'a décidée à écouter mon coeur et 
                     mes proches pour me lancer afin de vous proposer mon travail professionnel.
@@ -57,7 +59,7 @@
                 </p>
             </div>
             <!--............Partie 2: projets............-->
-            <div class="subCategorie2">
+            <div id="subCategorie2">
                 <h2>Projets</h2>
                 <!--La grille-->
                 <div class="gridContainer">
@@ -99,7 +101,7 @@
                     </div>
                 </div>
             </div>
-            <div id="footer">
+            <footer id="footer">
                 <ul>
                     <li class="footerList"><a class="footerLink" href="#">Politique de confidentialité</a></li>
                     <li class="footerList">Tous droits réservés à Amélie-Photographie</li>
@@ -107,7 +109,7 @@
                         <li class="footerList"><a class="footerLink" href="#">Me suivre</a></li>
                     </span>
                 </ul>
-            </div>  
+            </footer>  
        </div>
     </body>
 </html>     

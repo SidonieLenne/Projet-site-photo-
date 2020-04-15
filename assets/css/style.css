@@ -1,138 +1,140 @@
 body{
-    margin: 0px;
-    padding: 0px;
-    height: 1200px;
+    margin:0px;
+    padding:0px;
+    height:100%;
 }
 /*Entête*/
 header{
-    width: 100%;
-    height: 850px;
+    width:100%;
+    height:850px;
 }
 
 #background{
-    background-image: url(../img/couverture.jpg);
-    width: 100%;
-    height: 850px;
-    background-repeat: no-repeat;
+    background-image:url(../img/couverture.jpg);
+    width:100%;
+    height:850px;
+    background-repeat:no-repeat;
     background-size:contain;
-    background-attachment: scroll;
-    position: fixed;
-    top: -5em;
+    background-attachment:scroll;
+    position:fixed;
+    top:-5em;
 }
 /*Barre de navigation*/
-#PCnav {
-    background-color: #3B3B3B;
-    width: 20%;
-    height: 100%;
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    box-shadow: 4px 0px 6px #7A7A7A;
-    display: flex;
-    z-index: 1;
+#PCnav{
+    background-color:#3B3B3B;
+    font-family:'Gilda Display', serif;
+    width:20%;
+    height:100%;
+    position:fixed;
+    left:0px;
+    top:0px;
+    box-shadow:4px 0px 6px #7A7A7A;
+    display:flex;
+    z-index:1;
 }
 
-.logoblanc {
-    display: flex;
-    margin-left: 4em;
-    margin-top: -1em;
-    width: 150px;
+.logoblanc{
+    display:flex;
+    margin-left:4em;
+    margin-top:-1em;
+    width:150px;
     height:150px;
-    border-bottom-style: groove;
-    border-color: #FFB300;
+    border-bottom-style:groove;
+    border-color:#FFB300;
 }
 
-ul {
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
+ul{
+    width:100%;
+    margin:0px;
+    padding:0px;
 }
 
 #firstNav{
-    margin-top: 3em;
+    margin-top:3em;
 }
 
-li {
-    text-align: center;
-    list-style-type: none;
-    line-height: 2.5em;
-    font-size: 1.3em;
+li{
+    text-align:center;
+    list-style-type:none;
+    line-height:2.5em;
+    font-size:1.3em;
 }
 
-.socialButton {
-    line-height: inherit;
+.socialButton{
+    line-height:inherit;
 }
 
-#followme {
-    color: #D9D9D9;
-    margin-bottom: 0em
+#followme{
+    color:#D9D9D9;
+    margin-bottom:0em
 }
 
 .Button{
-    display: inline-block;
-    margin: 1em;
-    width: 1.5em;
-    height: 1.5em;
+    display:inline-block;
+    margin:1em;
+    width:1.5em;
+    height:1.5em;
 }
 
-li:hover {
-    color: #FFB300;
-    border-top-style: solid;
-    border-bottom-style: solid;
-    border-color: #FFB300;
+li:hover{
+    color:#FFB300;
+    border-top-style:solid;
+    border-bottom-style:solid;
+    border-color:#FFB300;
 }
 
 a {
-    text-decoration: none;
-    color: #D9D9D9;
+    text-decoration:none;
+    color:#D9D9D9;
 }
 
 a:hover{
-    color: #FFB300;
+    color:#FFB300;
 }
 /*............Parties 1 et 2: à propos et projets............*/
 /*Fond*/
 #categoriesBackground{
     background-color:#ffffff;
     float:left;
-    position:absolute;
+    position:relative;
     height:1400px;
     margin-top:0px;
     margin-right:0%;
-    margin-bottom:0px;
+    margin-bottom:30px;
     /*Variable selon la navbar*/
     margin-left:20%;
     width:80%;
+    min-height:100%;
 }
 
-.subCategorie1{
+#subCategorie1{
     padding:10px;
     margin:10px;
     margin-left:200px;
     margin-right:200px;
     text-align:center;
-    font-family: 'Gilda Display', serif;
+    font-family:'Gilda Display', serif;
 }
 
-.subCategorie2{
+#subCategorie2{
     padding:20px;
     margin:20px;
     text-align:center;
-    font-family: 'Gilda Display', serif;
+    font-family:'Gilda Display', serif;
 }
 
 h2{
     padding-top:100px;
-    font-family: 'Trirong', serif;
+    font-family:'Trirong', serif;
     border-top:1px solid #FFB300;
 }
 /*Grille*/
-.gridContainer {
+.gridContainer{
     display:grid;
     align-items:center;
     /*Permet d'avoir des colonnes identiques, qui prennent tout l'espace disponible 
     et qui font au minimum 300px et au max "1fr"(=le maximum qu'elle peut faire sans dépasser)*/
-    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    grid-template-columns:repeat(2, minmax(300px, 1fr));
     width:90%;
     margin:5%;
     height:500px;
@@ -147,8 +149,8 @@ h2{
     width:100%;
 }
 /*Titres des différentes parties*/
-.projectTitle {
-    font-size: 30px;
+.projectTitle{
+    font-size:30px;
     text-decoration: none;
     position:absolute;
     display:flex;
@@ -182,9 +184,8 @@ h2{
     bottom:0;
     width:99%;
     height:30px; 
-    font-family: 'Gilda Display', serif;
+    font-family:'Gilda Display', serif;
     text-align:center;
-    background-color:#ffffff;
 }
 
 .footerList{
@@ -210,10 +211,69 @@ a{
     display:none;
 }
 
+.logonoir{
+    display:none;
+}
+
 @media (hover:none){
+    header{
+        width:100%;
+        height:550px;
+    }    
+    /*Barre de navigation*/
+    #PCnav{
+        display:none;
+    }
+
+    #MOBILEnav{
+        display:inline-flex;
+        position:fixed;
+        top:500px;
+        width:99%;
+        height:35px; 
+        font-family:'Gilda Display', serif;
+        text-align:center;
+        background:#3B3B3B;
+    }
+    
+    ul{
+        width:100%;
+    }
+
+    li{
+        text-align:center;
+        list-style-type:none;
+        display:inline;
+        line-height:2.5em;
+        font-size:1.3em;
+        margin-left:100px;
+    }
+
+    a{
+        text-decoration:none;
+        color: #D9D9D9;
+    }
+
+    .logoblanc{
+        display:none;
+    }
+
+    .logonoir{
+        display:inline-block;
+        width:20%;
+        margin-top:50px;
+        right:0px;
+        position:absolute;
+    }    
+    /*Background blanc*/
+    #categoriesBackground{
+        width:100%;
+        height:2500px;
+        margin-left:0px;
+    }
     /*Grille*/
     .gridContainer{
-        grid-template-columns: repeat(1, minmax(300px, 1fr));
+        grid-template-columns:repeat(1, minmax(300px, 1fr));
     }
 
     .projectTitle{
@@ -221,7 +281,7 @@ a{
     }
     /*Footer*/
     #footer{
-        position:fixed;
+        position:absolute;
         bottom:0;
         background:#ffffff;
         height:30px;
@@ -234,41 +294,4 @@ a{
 
     .mediaQueries{
         display:inline;
-    }
-    /*Barre de navigation*/
-    #PCnav{
-        display:none;
-    }
-
-    #categoriesBackground{
-        width:100%;
-        margin-left:0px;
-    }
-
-    #MOBILEnav{
-        display:inline-block;
-        position:fixed;
-        top:350px;
-        width:99%;
-        height:30px; 
-        font-family: 'Gilda Display', serif;
-        text-align:center;
-    }
-    
-    ul {
-        width:100%;
-    }
-
-    li {
-        text-align: center;
-        list-style-type: none;
-        display:inline;
-        line-height: 2.5em;
-        font-size: 1.3em;
-        margin-left:100px;
-    }
-
-    a {
-        text-decoration: none;
-        color: #D9D9D9;
     }
