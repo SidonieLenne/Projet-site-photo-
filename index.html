@@ -2,29 +2,64 @@
 <html lang="fr" dir="ltr">
     <head>
         <meta charset="utf-8"/>
+        <meta name="viewport">
         <title>Amélie Photographie</title>
         <link rel="stylesheet" href="assets/css/style.css"/>
         <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Trirong:ital,wght@0,300;1,500&display=swap" rel="stylesheet">
     </head>
     <body>
+        <header>
+            <div id="background">
+                <img class="logonoir" src="assets\img\logo1.png" alt="logo">
+            </div>
+        </header>
+        <!-- Navbar pour PC -->
+        <nav id="PCnav">
+            <ul id="listNav">
+                <img class="logoblanc" src="assets\img\logo blanc.png" alt="logo">
+                <li id=firstNav><a href="#subCategorie1">À propos</a></li>
+                <li><a href="#subCategorie2">Projets</a></li>
+                <li><a href="produits.html">Produits</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="conditionsgénérales.html">Conditions générales</a></li>
+                <li id="lastNav">
+                    <p id="followme">Suivez moi</p>
+                    <div class="socialButton">
+                        <img class="Button" src="assets\img\facebook Icon.png" alt="facebookButton">
+                        <img class="Button" src="assets\img\index.jpg" alt="instagramButton">
+                        <img class="Button" src="assets\img\Tumblr.svg.png" alt="tumblrButton">
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <!--Navbar pour mobile-->
+        <nav id="MOBILEnav">
+            <ul id="listNavMobile">
+                <img class="logoblanc" src="assets\img\logo blanc.png" alt="logo">
+                <li id=firstNav><a href="#subCategorie1">À propos</a></li>
+                <li><a href="#subCategorie1">Projets</a></li>
+                <li><a href="#subCategorie2">Produits</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
         <!--Background-->
         <div id="categoriesBackground">
             <!--............Partie 1: à propos...........-->
-            <div class="subCategorie1">
-                <h2>A propos</h2>
-                <p>Ma passion de toujours pour la photographie m'a décidée à écouter mon coeur et 
-                    mes proches pour me lancer afin de vous proposer mon travail professionnel.
+            <div id="subCategorie1">
+                <h2>À propos</h2>
+                <p>Ma passion de toujours pour la photographie m'a décidée à écouter mon coeur et
+                    mes proches pour me lancer afin de vous proposer mon travail professionnel. <br/>
                     C'est dans la région des Hauts de France que j'ai souvent le plaisir de capturer
                     tous les instants au moment opportun, mais je peux me déplacer plus loin au besoin.
-                    Mon métier n'est pas seulement le résultat d'une simple photo, il y a toujours des 
-                    rencontres, des échanges. Simplicité, complicité et professionnalisme sont mes
+                    Mon métier n'est pas seulement le résultat d'une simple photo, il y a toujours des
+                    rencontres, des échanges.</br> Simplicité, complicité et professionnalisme sont mes
                     maîtres mots pour vous restituer une sensation, une image, une rencontre... Et c'est
                     toujours avec une grande fierté que je vous propose mon regard de photographe et
                     ma discrétion.
                 </p>
             </div>
             <!--............Partie 2: projets............-->
-            <div class="subCategorie2">
+            <div id="subCategorie2">
                 <h2>Projets</h2>
                 <!--La grille-->
                 <div class="gridContainer">
@@ -66,7 +101,7 @@
                     </div>
                 </div>
             </div>
-            <div id="footer">
+            <footer id="footer">
                 <ul>
                     <li class="footerList"><a class="footerLink" href="#">Politique de confidentialité</a></li>
                     <li class="footerList">Tous droits réservés à Amélie-Photographie</li>
@@ -74,39 +109,7 @@
                         <li class="footerList"><a class="footerLink" href="#">Me suivre</a></li>
                     </span>
                 </ul>
-            </div>  
+            </footer>
        </div>
     </body>
-</html>     
-=======
-<head>
-  <meta charset="utf-8"/>
-  <title>Amélie Photographie</title>
-  <link rel="stylesheet" href="assets/css/style.css"/>
-</head>
-<body>
-  <header>
-    <div id="background">
-    </div>
-  </header>
-  <!-- Navbar -->
-  <nav>
-    <ul id="listNav">
-      <img class="logoblanc" src="assets\img\logo blanc.png" alt="logo">
-      <li id=firstNav><a href="apropos.html">À propos</a></li>
-      <li><a href="projets.html">Projets</a></li>
-      <li><a href="produits.html">Produits</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="conditionsgénérales.html">Conditions générales</a></li>
-      <li id="lastNav">
-        <p id="followme">Suivez moi</p>
-        <div class="socialButton">
-          <img class="Button" src="assets\img\facebook Icon.png" alt="facebookButton">
-          <img class="Button" src="assets\img\index.jpg" alt="instagramButton">
-          <img class="Button" src="assets\img\Tumblr.svg.png" alt="tumblrButton">
-        </div>
-      </li>
-    </ul>
-  </nav>
-  </body>
-  </html>
+</html>
